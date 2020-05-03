@@ -30,7 +30,8 @@ app.get('/', (req, res) => {
 
 app.use('/auth', require('./routes/auth.routes'));
 app.use('/user', require('./routes/user.routes'));
-//app.use('/user/profile', require('./routes/profile.routes'));
+app.use('/auth.logout', require('./routes/auth.logout.routes'));
+app.use('/user/profile', require('./routes/profile.routes'));
 
 app.use('/', (req, res) => {
   res.status(404).render('notFound');

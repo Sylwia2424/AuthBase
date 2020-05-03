@@ -8,7 +8,9 @@ router.get('/google',
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/user/no-permission' }),
   (req, res) => {
     res.redirect('/user/logged');
+
   }
 );
+
 
 module.exports = router;

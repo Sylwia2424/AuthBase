@@ -1,17 +1,18 @@
 const express = require('express');
+const passport = require('passport');
 const router = express.Router();
 
-router.get('/logged', (req, res) => {
-  res.render('logged');
+
+router.get('/', (req, res) => {
+  res.render('profile');
 });
 
-router.get('/logged/settings', (req, res) => {
-  res.render('logged');
+router.get('/settings', (req, res) => {
+  res.render('settings');
 });
 
 router.get('/no-permission', (req, res) => {
   res.render('noPermission');
-});
-
+}); 
 
 module.exports = router;
